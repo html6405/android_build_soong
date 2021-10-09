@@ -636,8 +636,8 @@ func (r *RuleBuilder) Build(name string, desc string) {
 				ctx: r.ctx,
 			},
 		}
-		sboxCmd.Text("rm -rf").Output(r.outDir)
-		sboxCmd.Text("&&")
+	//	sboxCmd.Text("rm -rf").Output(r.outDir)
+	//	sboxCmd.Text("&&")
 		sboxCmd.builtToolWithoutDeps("sbox").
 			Flag("--sandbox-path").Text(shared.TempDirForOutDir(PathForOutput(r.ctx).String())).
 			Flag("--manifest").Input(r.sboxManifestPath)
