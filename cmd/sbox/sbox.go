@@ -243,12 +243,6 @@ func runCommand(command *sbox_proto.Command, tempDir string, commandIndex int) (
 		return "", fmt.Errorf("command is required")
 	}
 
-	// Remove files from the output directory
-	err = clearOutputDirectory(command.CopyAfter, outputDir, writeType(writeIfChanged))
-	if err != nil {
-		return "", err
-	}
-
 	pathToTempDirInSbox := tempDir
 	if command.GetChdir() {
 		pathToTempDirInSbox = "."
