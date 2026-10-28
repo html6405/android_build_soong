@@ -40,7 +40,6 @@ var androidmk_denylist []string = []string{
 	"hardware/interfaces/",
 	"hardware/libhardware/",
 	"hardware/libhardware_legacy/",
-	"hardware/ril/",
 	// Do not block other directories in kernel/, see b/319658303.
 	"kernel/configs/",
 	"kernel/prebuilts/",
