@@ -273,6 +273,9 @@ com\.google\.wear\..*
 lineageos\.platform
 org\.lineageos\.platform\.internal
 
+# Samsung radio AIDL used by framework telephony
+vendor\.samsung\.hardware\.radio\.network
+
 # MTK adds
 com\.mediatek
 com\.mediatek\..*
