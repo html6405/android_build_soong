@@ -42,7 +42,9 @@ def get_build_flavor(product_config):
 def get_build_keys(product_config):
   default_cert = product_config.get("DefaultAppCertificate", "")
   if default_cert == "" or default_cert == os.path.join(TEST_KEY_DIR, "testKey"):
-    return "test-keys"
+    # Match this tree's Make policy for development builds. This is a build
+    # label only; it does not change the certificate used to sign the images.
+    return "dev-keys"
   if default_cert.startswith("vendor/lineage-priv/"):
     return "release-keys"
   return "dev-keys"
